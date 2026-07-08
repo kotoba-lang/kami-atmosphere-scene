@@ -8,7 +8,7 @@
 
 (deftest smoke-test
   (testing "namespace loads"
-    (is (some? (the-ns 'atmosphere-scene)))))
+    (is (some? (find-ns 'atmosphere-scene)))))
 
 ;; Rust: resolve_weather_is_driven_by_edn
 (deftest resolve-weather-is-driven-by-edn
