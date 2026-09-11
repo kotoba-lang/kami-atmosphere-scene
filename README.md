@@ -9,7 +9,7 @@ part of the **clj-wgsl migration** (ADR-2607010930, `com-junkawasaki/root`).
 Restored. Ports the full original crate (`src/lib.rs`, recovered from commit
 `a8368f9c0d784dbc9d11e8fa8f407aa95c7ce4fa`) to zero-dep portable CLJC:
 
-- `src/atmosphere_scene.cljc` (namespace `atmosphere-scene`) — the EDN authoring surface for
+- `src/atmosphere_scene.cljk` (namespace `atmosphere-scene`) — the EDN authoring surface for
   `kotoba-lang/atmosphere` weather config. Parses `:weather/presets` EDN via
   `kotoba-lang/scene`'s tolerant accessors (`scene/mget` / `scene/num` / `scene/root-map` /
   `scene/kw-key`) and merges each preset's fields onto `atmosphere/default-weather` (the CLJC
@@ -62,7 +62,7 @@ This crate is the data-tier counterpart of `kami-vehicle-scene` for the sky/weat
   failure, `nil` for an unknown name.
 - `all-preset-names` — `["overcast" "clear"]`.
 
-All 8 original Rust `#[test]`s ported 1:1 to `test/atmosphere_scene_test.cljc` (+1 smoke test) —
+All 8 original Rust `#[test]`s ported 1:1 to `test/atmosphere_scene_test.cljk` (+1 smoke test) —
 9 tests / 22 assertions, 0 failures.
 
 ## Develop
